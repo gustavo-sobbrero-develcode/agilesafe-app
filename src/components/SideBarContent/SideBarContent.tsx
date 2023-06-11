@@ -1,13 +1,13 @@
 // components/SidebarContent.tsx
 
 import * as React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 interface SidebarContentProps {
   navigation: any;
 }
 
-const SideBarContent: React.FC<SidebarContentProps> = ({navigation}) => {
+const SideBarContent: React.FC<SidebarContentProps> = ({ navigation }) => {
   const handleNavigation = (screen: string) => {
     navigation.navigate(screen);
   };
@@ -21,7 +21,7 @@ const SideBarContent: React.FC<SidebarContentProps> = ({navigation}) => {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.item}
-        onPress={() => handleNavigation('Settings')}>
+        onPress={() => handleNavigation('SearchInstitutions')}>
         <Text>Instituições de saúde</Text>
       </TouchableOpacity>
       <TouchableOpacity

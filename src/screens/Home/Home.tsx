@@ -1,14 +1,16 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import CustomButton from '../../components/CustomButton/CustomButton';
+import { useNavigation } from '@react-navigation/native';
 
 const Home: React.FC = () => {
+  const navigation = useNavigation()
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Vamos começar?</Text>
       <View style={styles.buttonTop}>
         <CustomButton
-          onPress={() => console.log('home')}
+          onPress={() => navigation.navigate('SearchInstitutions')}
           title="Instituições de Saúde"
         />
       </View>
