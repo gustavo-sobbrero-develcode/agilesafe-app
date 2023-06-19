@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { TextInput, Button, View, StyleSheet } from 'react-native';
+import { TextInput, Button, View, StyleSheet, TextInputProps } from 'react-native';
 
-interface InputComponentProps {
+interface InputComponentProps extends TextInputProps {
     onInputChange: (text: string) => void;
     placeholder: string;
 }
 
-const InputComponent = ({ onInputChange, placeholder }: InputComponentProps) => {
+const InputComponent = ({ onInputChange, placeholder, ...rest }: InputComponentProps) => {
     const [inputValue, setInputValue] = useState<string>('');
 
     const handleInputChange = (text: string) => {
@@ -22,6 +22,7 @@ const InputComponent = ({ onInputChange, placeholder }: InputComponentProps) => 
                 placeholder={placeholder}
                 value={inputValue}
                 onChangeText={handleInputChange}
+                {...rest}
             />
         </View>
     );
@@ -35,12 +36,13 @@ const styles = StyleSheet.create({
     },
     input: {
         flex: 1,
-        height: 40,
+        minHeight: 40,
         borderColor: 'lightgray',
         borderWidth: 1,
         borderRadius: 8,
         marginRight: 10,
         paddingHorizontal: 10,
+        textAlignVertical: 'top'
     },
 });
 

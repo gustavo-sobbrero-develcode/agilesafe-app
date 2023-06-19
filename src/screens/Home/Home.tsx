@@ -16,7 +16,7 @@ const Home: React.FC = () => {
       </View>
       <View style={styles.buttonBottom}>
         <CustomButton
-          onPress={() => console.log('lembrete')}
+          onPress={() => navigation.navigate('MedicineReminder')}
           title="Lembrete de Remédios"
         />
       </View>

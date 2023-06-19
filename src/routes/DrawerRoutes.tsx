@@ -8,6 +8,7 @@ import SideBarContent from '../components/SideBarContent/SideBarContent';
 import Home from '../screens/Home/Home';
 import { StatusBar } from 'react-native';
 import SearchInstitutions from '../screens/SearchInstitutions/SearchInstitutions';
+import MedicineReminder from '../screens/MedicineReminder/MedicineReminder';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -29,6 +30,15 @@ function StackNav() {
             headerStyle: { backgroundColor: 'lightgray' },
             headerTitleAlign: 'center',
             headerTitle: 'Instituições de Saúde',
+          }}
+        />
+        <Stack.Screen
+          name="MedicineReminder"
+          component={MedicineReminder}
+          options={{
+            headerStyle: { backgroundColor: 'lightgray' },
+            headerTitleAlign: 'center',
+            headerTitle: 'Lembrete de Remédios',
           }}
         />
       </Stack.Navigator>

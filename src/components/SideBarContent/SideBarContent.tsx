@@ -26,7 +26,7 @@ const SideBarContent: React.FC<SidebarContentProps> = ({ navigation }) => {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.item}
-        onPress={() => handleNavigation('Settings')}>
+        onPress={() => handleNavigation('MedicineReminder')}>
         <Text>Lembrete de remédios</Text>
       </TouchableOpacity>
       <TouchableOpacity
